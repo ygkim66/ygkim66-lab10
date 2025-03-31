@@ -1,3 +1,31 @@
 1
 42
+DEBIG items
+DEBIG that
+DEBIG are
+DEBIG greater
+DEBIG than
+DEBIG five
+DEBIG yes
+DEBIG words
 Found 5 words.
+1
+51
+DEBIG items
+DEBIG that
+DEBIG need
+DEBIG counted
+DEBIG are
+DEBIG greater
+DEBIG than
+DEBIG five
+DEBIG words
+Found 9 words.
+1
+0
+TooSmallText: Only found 0 words.
+1
+7
+DEBIG shor
+DEBIG tt
+TooSmallText: Only found 2 words.

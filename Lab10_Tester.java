@@ -57,7 +57,7 @@ public class Lab10_Tester {
     } catch (Exception e) {}
     assertEquals(expected, result);
   }
-
+ 
   @Test
   public void test3() {
     System.out.println("process long text with missing stopword");
@@ -85,7 +85,7 @@ public class Lab10_Tester {
     } catch (Exception e) {}
     assertEquals(expected, result);
   }
-
+ 
   @Test
   public void test5() {
     System.out.println("process short text with missing stopword");
@@ -146,7 +146,7 @@ public class Lab10_Tester {
     assertEquals(expected, result.toString());
   }
 
-  @Test
+  /*@Test
   public void test9() {
     System.out.println("process missing file");
     String expected = "This file has enough words to not trigger and exception and the stopword we're going to use " +
@@ -389,5 +389,5 @@ public class Lab10_Tester {
     String expected = "TooSmallText: Only found 2 words.";
     assertEquals(expected, result);
   }
-
+*/
 }

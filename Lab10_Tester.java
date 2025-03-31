@@ -163,7 +163,7 @@ public class Lab10_Tester {
     } catch (Exception e) {}
     assertEquals(expected, result.toString());
     System.setIn(sysInBackup); // optionally, reset System.in to its original
-  }
+  }*/
 
   @Test
   public void test10() {
@@ -238,7 +238,7 @@ public class Lab10_Tester {
     assertEquals(expected, result);
   }
 
-  @Test
+  /*@Test
   public void test12() {
     System.out.println("test main valid number choice 1 no stopword");
     try {

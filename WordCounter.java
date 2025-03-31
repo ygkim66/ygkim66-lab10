@@ -1,7 +1,6 @@
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStreamReader;
+//import java.io.FileInputStream;
+import java.io.*;
+//import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.regex.*;
 
@@ -66,14 +65,39 @@ public class WordCounter{
     //if file is empty, raise EmptyFileException containing file path in the message
     public static StringBuffer processFile(String path) throws EmptyFileException{
         StringBuffer sb = new StringBuffer();
+        boolean empty = true;
+       // BufferedReader aas = new BufferedReader(new FileReader(new File(path)));
 
-        try{
-            BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(path)));
-            sb.append(br);
+       File file = new File(path);
+       System.out.println(file.length());
+       if (file.length() == 0){
+        throw new EmptyFileException(path + " was empty");
+       }
+        
 
+        try (BufferedReader br = new BufferedReader(new FileReader(new File(path)))){
+            empty = false;
+            sb.append(br.readLine());
+            System.out.println(sb.toString());
+
+            System.out.println(empty);
+            System.out.println(sb.toString());
+
+            if (sb.toString().equals(null)){
+                System.out.println("what");
+                throw new EmptyFileException(path + " was empty");
+            }
+            System.out.println("123 help");
+
+  
         }
-        catch (FileNotFoundException  e){
-          //  throw new EmptyFileException(path); 
+        catch (FileNotFoundException i){
+            //throw new IOException("yo");
+            System.out.println("1233 help");
+            throw new EmptyFileException(path + " was empty");
+        }
+        catch (IOException a){
+            System.out.println("sfasdoafjd");
         }
         return sb;
     }
